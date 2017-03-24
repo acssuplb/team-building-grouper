@@ -7,6 +7,7 @@ maru,2013
 nur,2013
 julius,2013
 yani,2013
+ajay,2013
 princess,2014
 cyrez,2014
 jo,2014
@@ -17,6 +18,7 @@ jonathan,2014
 dan,2014
 paula,2014
 kenichii,2014
+gab,2014
 arvin,2014
 jm,2014
 jem,2014

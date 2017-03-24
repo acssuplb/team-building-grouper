@@ -15,7 +15,7 @@ const start = () => {
 	let groupings = [];
 	let start = Math.floor(Math.random()*10)%GROUPS;
 
-	fs.readFileSync(INPUT, 'utf8').split('\r\n').forEach((item, index) => {
+	fs.readFileSync(INPUT, 'utf8').replace('\r', '').split('\n').forEach((item, index) => {
 		let datum = item.split(',');
 		data.push({
 			'name': datum[0],
@@ -49,6 +49,8 @@ const start = () => {
 			fs.appendFileSync(OUTPUT, '\t' + groupings[i][j].name + '\n');
 		}
 	}
+
+	console.log("Done creating the groups.");
 }
 
 start();
