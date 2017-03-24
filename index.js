@@ -7,14 +7,9 @@ const OUTPUT = 'groupings.txt';
 
 const start = () => {
 	let data = [];
-	let batch12 = [];
-	let batch13 = [];
-	let batch14 = [];
-	let batch15 = [];
-	let members = [];
-	let groupings = [];
-	let start = Math.floor(Math.random()*10)%GROUPS;
+	let groupings = [[],[],[],[]];
 
+	//get data from file
 	fs.readFileSync(INPUT, 'utf8').replace('\r', '').split('\n').forEach((item, index) => {
 		let datum = item.split(',');
 		data.push({
@@ -23,16 +18,14 @@ const start = () => {
 		});
 	});
 
-	for(let i=0; i<GROUPS; i++) {
-		groupings.push([]);
-	}
-
+	//randomizing people to each group
 	while(data.length) {
 		let start = Math.floor(Math.random()*10)%GROUPS;
 		let i = start;
+
 		do {
-			let datum;
-			if(datum = data.pop()) {
+			let datum = data.pop();
+			if(datum) {
 				groupings[i].push(datum);
 				i = (i + 1)%GROUPS;
 			} else {
@@ -41,7 +34,7 @@ const start = () => {
 		} while(i != start);
 	}
 
-
+	//writing result to file
 	fs.writeFileSync(OUTPUT, '');
 	for(let i=0; i<GROUPS; i++) {
 		fs.appendFileSync(OUTPUT, i + '\n');
@@ -50,7 +43,8 @@ const start = () => {
 		}
 	}
 
-	console.log("Done creating the groups.");
+	//prompt for user
+	console.log("Done.");
 }
 
 start();
