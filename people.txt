@@ -28,6 +28,8 @@ bernie,2014
 cyrus,2014
 jlo,2014
 christian,2014
+edward,2014
+arianne,2014
 princess,2014
 shar,2014
 paula,2014
@@ -35,5 +37,7 @@ jem,2014
 santa,2014
 kath,2014
 le,2014
+jerme,2015
 trixia,2015
 sky,2015
+kim,2015
