@@ -14,5 +14,3 @@ Edit `people.txt`. Use the following syntax for each people participating:
 ```
 [name],[batch]\n
 ```
-
-Do not leave any empty new line in the txt file.

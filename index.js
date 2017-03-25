@@ -11,11 +11,13 @@ const start = () => {
 
 	//get data from file
 	fs.readFileSync(INPUT, 'utf8').replace('\r', '').split('\n').forEach((item, index) => {
-		let datum = item.split(',');
-		data.push({
-			'name': datum[0],
-			'batch': datum[1]
-		});
+		if(item.trim()) {
+			let datum = item.split(',');
+			data.push({
+				'name': datum[0],
+				'batch': datum[1]
+			});
+		}
 	});
 
 	//randomizing people to each group
