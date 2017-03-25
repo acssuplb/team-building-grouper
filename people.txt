@@ -26,6 +26,8 @@ joema,2014
 eddie,2014
 bernie,2014
 cyrus,2014
+jlo,2014
+christian,2014
 princess,2014
 shar,2014
 paula,2014
